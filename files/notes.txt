@@ -1,0 +1,85 @@
+tensorflow and keras overview
+
+tensorflow is an open-source deep learning framework developed by google brain team in 2015. it is mainly used for numerical computation and large-scale machine learning tasks. tensorflow allows you to build and train neural networks efficiently by handling all the mathematical operations such as gradients, tensor manipulations, and optimization in the background.
+
+the name "tensorflow" comes from the way it processes data as multi-dimensional arrays called tensors, which flow through computational graphs. each node in the graph represents an operation, and the edges represent the tensors flowing between these operations.
+
+keras is a high-level deep learning api (application programming interface) built on top of tensorflow. it was originally developed by françois chollet in 2015 and later integrated directly into tensorflow as "tf.keras". keras provides a more user-friendly and simplified interface to design, train, and test deep learning models.
+
+so, keras acts as a wrapper for tensorflow making it easier to write neural network code without worrying about complex backend details.
+
+relationship between tensorflow and keras
+
+keras is not a standalone deep learning framework anymore. it runs on top of tensorflow as its official high-level api. tensorflow handles the backend computations (matrix operations, gpu acceleration, etc.), while keras provides a simpler way to define models (layers, activations, loss functions).
+
+example relationship:
+tensorflow = engine (does heavy lifting)
+keras = steering wheel (lets you control easily)
+
+why use tensorflow and keras
+
+1. easy model building
+   keras lets you create models quickly using the sequential or functional api. you can build neural networks layer by layer with minimal code.
+
+2. scalability and deployment
+   tensorflow supports distributed training and deployment across cpus, gpus, and even mobile devices using tensorflow lite. it also integrates with tensorflow serving and tensorflow.js for production use.
+
+3. pre-trained models
+   tensorflow hub and keras applications provide many pre-trained models (like resnet, inception, bert, etc.) which can be used for transfer learning and fine-tuning.
+
+4. strong community and ecosystem
+   tensorflow has wide adoption in both research and industry. it has a large support ecosystem including tensorboard for visualization, tf.data for data pipelines, and tf.hub for model reuse.
+
+5. integration with other google tools
+   tensorflow integrates easily with tools like colab, google cloud ai, and tfx (tensorflow extended) for end-to-end ml pipelines.
+
+who developed them
+
+tensorflow was developed by the google brain team.
+keras was developed by françois chollet, a google engineer.
+
+difference between tensorflow and pytorch
+
+1. developer and release
+   tensorflow – developed by google, released in 2015
+   pytorch – developed by facebook ai research (fair), released in 2016
+
+2. computation graph
+   tensorflow (v1) used static computation graphs which had to be defined first and then executed. this was less intuitive for debugging. tensorflow 2.x now supports eager execution similar to pytorch.
+   pytorch uses dynamic computation graphs which are built on the fly during execution. this makes debugging and experimentation easier, especially for researchers.
+
+3. syntax and ease of use
+   keras/tensorflow 2.x is high-level and beginner-friendly. pytorch is pythonic and feels more natural for programmers familiar with python and numpy.
+
+4. performance and deployment
+   tensorflow is better suited for production and deployment. it supports tflite for mobile, tf.js for browsers, and tf serving for cloud.
+   pytorch is often preferred for research and prototyping but now also has torchserve and torchscript for deployment.
+
+5. ecosystem
+   tensorflow has a larger ecosystem with visualization (tensorboard), data handling, and ml pipeline tools.
+   pytorch ecosystem is catching up with lightning, fastai, and other tools.
+
+6. community and research usage
+   pytorch is preferred by researchers because of its dynamic behavior and simplicity.
+   tensorflow dominates production environments because of its stability and deployment tools.
+
+when to use tensorflow vs pytorch
+
+use tensorflow (and keras) when:
+
+* you want to build and deploy production-grade applications
+* you need cross-platform support (mobile, web, edge devices)
+* you need ready-made tools like tensorboard for monitoring
+* you want simplicity with keras api
+
+use pytorch when:
+
+* you are doing research or experimentation where model structure may change frequently
+* you need more flexibility and pythonic control over computations
+* you want easy debugging and dynamic graph creation
+
+summary
+
+tensorflow is a full-fledged deep learning framework mainly used for production and deployment. keras is its user-friendly high-level api for easier model creation. 
+pytorch is another deep learning framework focused on flexibility and research friendliness.
+together, tensorflow and keras are ideal for learning and implementing neural networks in academic and professional projects.
