@@ -11,6 +11,8 @@ and their versions specified.
 
 Select kernel and start coding in ipynb file.
 
+Remember to delete venv folder before uploading on github.
+
 End to End Deep Learning Project - ANN
 
 CHURN MODELLING DATASET => CLASSIFICATION
