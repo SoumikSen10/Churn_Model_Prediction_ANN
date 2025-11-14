@@ -34,3 +34,24 @@ we will use some kind of optimizers (everything we will be doing using TensorFlo
 --> After this we will use Streamlit to build a web app where we will load this trained model and use this model to make predictions based on user input.
 
 --> Finally we will deploy this web app using Streamlit cloud.
+
+
+
+
+
+
+Uploading large files to Github repo:
+GitHub has a file size limit of 100 MB for individual files. If you try to upload a file larger than this limit, you'll receive an error message. To upload large files to GitHub, you can use Git Large File Storage (Git LFS). Here's how to do it:
+
+
+--> git lfs install
+
+--> git lfs track "*.h5"
+
+--> git lfs push --all origin main
+
+--> git add .
+
+--> git commit -m "Adding large file using Git LFS"
+
+--> git push origin main
